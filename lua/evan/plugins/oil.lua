@@ -11,3 +11,5 @@ require("oil").setup({
         -- "mtime",
     },
 })
+
+vim.keymap.set('n', '<leader>e', ':Oil<CR>')
