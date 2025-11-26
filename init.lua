@@ -2,7 +2,10 @@ require("evan.opts")
 require("evan.keys")
 require("evan.lsp")
 
+vim.cmd.packadd 'rustaceanvim'
+
 -- load plugin files (stolen from miroshQa/dotfiles)
+
 local function load_file(path)
     local co = coroutine.running()
     vim.defer_fn(function()
@@ -35,5 +38,3 @@ coroutine.wrap(function()
         })
     end
 end)()
-
-local autocmd = vim.api.nvim_create_autocmd
