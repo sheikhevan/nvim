@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "LuaSnip": {
+      "rev": "3732756842a2f7e0e76a7b0487e9692072857277",
+      "src": "https://github.com/L3MON4D3/LuaSnip"
+    },
     "fidget.nvim": {
       "rev": "e32b672d8fd343f9d6a76944fedb8c61d7d8111a",
       "src": "https://github.com/j-hui/fidget.nvim"
@@ -9,11 +13,15 @@
       "src": "https://github.com/folke/flash.nvim"
     },
     "fzf-lua": {
-      "rev": "3b4a5d13adeb33f387d744b6ed777bb5401cba94",
+      "rev": "9a0704e8af8f8442110ff22a83b5608366b235df",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
+    "fzf-org.nvim": {
+      "rev": "d45bb52774232d7e30836173313acc7eb2b5fe2e",
+      "src": "https://github.com/0xzhzh/fzf-org.nvim"
+    },
     "mini.nvim": {
-      "rev": "6e885e4c27743ae6bf5957ea78ce86c032835f09",
+      "rev": "72b0194c56c984476c5975b62eb340fd1aa1686a",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim-treesitter": {
@@ -29,11 +37,19 @@
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
     },
     "oil.nvim": {
-      "rev": "7e1cd7703ff2924d7038476dcbc04b950203b902",
+      "rev": "01cb3a8ad7d5e8707041edc775af83dbf33838f4",
       "src": "https://github.com/stevearc/oil.nvim"
     },
+    "org-bullets.nvim": {
+      "rev": "21437cfa99c70f2c18977bffd423f912a7b832ea",
+      "src": "https://github.com/nvim-orgmode/org-bullets.nvim"
+    },
+    "orgmode": {
+      "rev": "dc01c6fb7d8097232708a87593693909b4509f7f",
+      "src": "https://github.com/nvim-orgmode/orgmode"
+    },
     "rustaceanvim": {
-      "rev": "6b7e0e18ad8fa0598bc038aef7bb6bba288adbad",
+      "rev": "37f362b3d554633d5c9d65268932c3ce5d3652fb",
       "src": "https://github.com/mrcjkb/rustaceanvim"
     },
     "vague.nvim": {

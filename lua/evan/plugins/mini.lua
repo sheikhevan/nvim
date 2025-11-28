@@ -42,12 +42,6 @@ require("mini.git").setup()
 
 require("mini.hipatterns").setup({
     highlighters = {
-        -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
-        fixme     = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
-        hack      = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
-        todo      = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
-        note      = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
-
         -- Highlight hex color strings (`#rrggbb`) using that color
         hex_color = require("mini.hipatterns").gen_highlighter.hex_color(),
     },
@@ -58,12 +52,15 @@ require("mini.starter").setup({
 
     items = {
         { action = "ene | startinsert",                                                        name = "New file",          section = "Built-in" },
+        { action = "qa",                                                                       name = "Quit",              section = "Built-in" },
         { action = "lua require('fzf-lua').files()",                                           name = "Find file",         section = "FZF" },
         { action = "lua require('fzf-lua').live_grep_native()",                                name = "Live grep",         section = "FZF" },
         { action = "lua require('fzf-lua').oldfiles()",                                        name = "Recent files",      section = "FZF" },
         { action = "lua require('mini.sessions').read(require('mini.sessions').get_latest())", name = "Load last session", section = "Session" },
         { action = "lua require('mini.sessions').select()",                                    name = "Select session",    section = "Session" },
-        { action = "qa",                                                                       name = "Quit",              section = "Built-in" },
+        { action = "lua require('orgmode').action('agenda.prompt')",                           name = "Agenda",            section = "Org" },
+        { action = "lua require('orgmode').action('capture.prompt')",                          name = "Capture",           section = "Org" },
+        { action = "lua require('fzf-org').files()",                                           name = "Org files",         section = "Org" },
     },
 
     header = table.concat({

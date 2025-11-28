@@ -1,6 +1,9 @@
 vim.lsp.enable({
     "lua_ls",
-    "tinymist"
+    "tinymist",
+    "ts_ls",
+    "astro",
+    "tailwindcss",
 })
 
 vim.diagnostic.config({
@@ -76,7 +79,6 @@ local function setup_completion_mappings(bufnr)
 end
 
 vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('my.lsp', {}),
     callback = function(args)
         local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
         if client:supports_method('textDocument/completion') then
@@ -98,5 +100,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
                 })
             end
         end
+    end,
+})
+
+-- orgmode omnifunc completion
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'org',
+    callback = function(args)
+        -- Set omnifunc for orgmode completion
+        vim.opt_local.omnifunc = 'v:lua.require("orgmode").completion.omnifunc'
+
+        -- Setup completion mappings for org files
+        setup_completion_mappings(args.buf)
+
+        -- Optional: Set specific completion triggers for org mode
+        vim.opt_local.completeopt = 'menu,menuone,noselect'
     end,
 })
