@@ -58,9 +58,6 @@ require("mini.starter").setup({
         { action = "lua require('fzf-lua').oldfiles()",                                        name = "Recent files",      section = "FZF" },
         { action = "lua require('mini.sessions').read(require('mini.sessions').get_latest())", name = "Load last session", section = "Session" },
         { action = "lua require('mini.sessions').select()",                                    name = "Select session",    section = "Session" },
-        { action = "lua require('orgmode').action('agenda.prompt')",                           name = "Agenda",            section = "Org" },
-        { action = "lua require('orgmode').action('capture.prompt')",                          name = "Capture",           section = "Org" },
-        { action = "lua require('fzf-org').files()",                                           name = "Org files",         section = "Org" },
     },
 
     header = table.concat({
