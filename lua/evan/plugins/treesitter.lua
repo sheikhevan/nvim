@@ -24,6 +24,14 @@ require("nvim-treesitter.configs").setup({
         "gitignore",
         "rust",
         "typst",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "astro",
+        "svelte",
+
     },
     incremental_selection = {
         enable = true,
