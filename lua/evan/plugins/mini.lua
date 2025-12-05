@@ -51,13 +51,16 @@ require("mini.starter").setup({
     autoopen = true,
 
     items = {
-        { action = "ene | startinsert",                                                        name = "New file",          section = "Built-in" },
-        { action = "qa",                                                                       name = "Quit",              section = "Built-in" },
-        { action = "lua require('fzf-lua').files()",                                           name = "Find file",         section = "FZF" },
-        { action = "lua require('fzf-lua').live_grep_native()",                                name = "Live grep",         section = "FZF" },
-        { action = "lua require('fzf-lua').oldfiles()",                                        name = "Recent files",      section = "FZF" },
-        { action = "lua require('mini.sessions').read(require('mini.sessions').get_latest())", name = "Load last session", section = "Session" },
-        { action = "lua require('mini.sessions').select()",                                    name = "Select session",    section = "Session" },
+        { action = "ene | startinsert",                                                        name = "New file",                     section = "Built-in" },
+        { action = "qa",                                                                       name = "Quit",                         section = "Built-in" },
+        { action = "lua require('fzf-lua').files()",                                           name = "Find file",                    section = "FZF" },
+        { action = "lua require('fzf-lua').live_grep_native()",                                name = "Live grep",                    section = "FZF" },
+        { action = "lua require('fzf-lua').oldfiles()",                                        name = "Recent files",                 section = "FZF" },
+        { action = "lua require('mini.sessions').read(require('mini.sessions').get_latest())", name = "Load last session",            section = "Session" },
+        { action = "lua require('mini.sessions').select()",                                    name = "Select session",               section = "Session" },
+        { action = "Obsidian new",                                                             name = "Obsidian new",                 section = "Obsidian" },
+        { action = "Obsidian new_from_template",                                               name = "Obsidian new (from template)", section = "Obsidian" },
+        { action = "Obsidian today",                                                           name = "Obsidian today's daily note",  section = "Obsidian" },
     },
 
     header = table.concat({

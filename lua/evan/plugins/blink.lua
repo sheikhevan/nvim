@@ -15,6 +15,7 @@ require('blink-cmp').setup({
     },
 
     appearance = {
+        use_nvim_cmp_as_default = false,
         nerd_font_variant = 'mono'
     },
 
@@ -24,8 +25,16 @@ require('blink-cmp').setup({
 
     completion = {
         menu = {
-            border = 'single',
+            enabled = true,
+            min_width = 15,
+            max_height = 10,
+            winblend = 0,
+            winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None',
+            border = 'none',
             draw = {
+                columns = {
+                    { "kind_icon", "label", "label_description", gap = 1 },
+                },
                 components = {
                     kind_icon = {
                         text = function(ctx)
@@ -48,8 +57,8 @@ require('blink-cmp').setup({
                 }
             }
         },
-        documentation = { window = { border = 'single' } },
-        ghost_text = { enabled = true },
+        documentation = { window = { border = 'single', winblend = 0, winhighlight = 'Normal:Pmenu,FloatBorder:Pmenu', } },
+        -- ghost_text = { enabled = true },
     },
-    signature = { window = { border = 'single' } },
+    signature = { window = { border = 'none' } },
 })

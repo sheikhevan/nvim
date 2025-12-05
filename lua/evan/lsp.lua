@@ -2,9 +2,10 @@ vim.lsp.enable({
     "lua_ls",
     "bashls",
     "tinymist",
-    "ts_ls",
+    "tsgo",
     "astro",
     "tailwindcss",
+    "basedpyright",
 })
 
 vim.diagnostic.config({

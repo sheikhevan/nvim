@@ -9,6 +9,10 @@
       "src": "https://github.com/Saghen/blink.cmp",
       "version": "'v1.8.0'"
     },
+    "conform.nvim": {
+      "rev": "ffe26e8df8115c9665d24231f8a49fadb2d611ce",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
     "fidget.nvim": {
       "rev": "e32b672d8fd343f9d6a76944fedb8c61d7d8111a",
       "src": "https://github.com/j-hui/fidget.nvim"
@@ -20,6 +24,10 @@
     "fzf-lua": {
       "rev": "cae96b04f6cad98a3ad24349731df5e56b384c3c",
       "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "markview.nvim": {
+      "rev": "bf62f7d173f4b42cd02794c6c5f5a8bd3047a58a",
+      "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mini.nvim": {
       "rev": "dca98843fab66d080779cd973e7139e258ff164c",
@@ -37,6 +45,10 @@
       "rev": "5ca4aaa6efdcc59be46b95a3e876300cfead05ef",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
     },
+    "obsidian.nvim": {
+      "rev": "b6f212bc1fb5b7b2b285ce0ba5c6d2a2c86e3033",
+      "src": "https://github.com/obsidian-nvim/obsidian.nvim"
+    },
     "oil.nvim": {
       "rev": "cbcb3f997f6f261c577b943ec94e4ef55108dd95",
       "src": "https://github.com/stevearc/oil.nvim"
@@ -44,6 +56,10 @@
     "rustaceanvim": {
       "rev": "6c3785d6a230bec63f70c98bf8e2842bed924245",
       "src": "https://github.com/mrcjkb/rustaceanvim"
+    },
+    "snacks.nvim": {
+      "rev": "fe7cfe9800a182274d0f868a74b7263b8c0c020b",
+      "src": "https://github.com/folke/snacks.nvim"
     },
     "vague.nvim": {
       "rev": "dba28050887c2810b5ebf9e0143b4e919bd55757",
