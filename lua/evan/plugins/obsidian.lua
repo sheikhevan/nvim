@@ -12,6 +12,8 @@ require("obsidian").setup({
         },
     },
 
+    notes_subdir = "200 Zettelkasten",
+
     completion = {
         blink = true,
         min_chars = 2,
@@ -24,7 +26,7 @@ require("obsidian").setup({
     frontmatter = {
         func = function(note)
             local out = {
-                tags = note.tags
+                created = os.date("%Y-%m-%d"),
             }
 
             if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
@@ -38,9 +40,8 @@ require("obsidian").setup({
     },
 
     daily_notes = {
-        folder = "600 Daily",
+        folder = "500 Daily",
         date_format = "%Y-%m-%d",
-        default_tags = { "daily" },
         workdays_only = false,
         template = "Daily.md",
     },
@@ -52,7 +53,7 @@ require("obsidian").setup({
     },
 
     attachments = {
-        img_folder = "002 Attachments",
+        img_folder = "001 Attachments",
     },
 
     follow_url_func = function(url)
@@ -75,6 +76,34 @@ vim.keymap.set("n", "gf", function()
     end
 end, { noremap = false, expr = true, desc = "follow link" })
 
+-- Paste URL into selection
+-- vim.keymap.set("v", "<leader>p", function()
+--     vim.cmd('normal! "xy')
+--     local selected_text = vim.fn.getreg('x')
+--
+--     local url = vim.fn.getreg('+')
+--
+--     local markdown_link = string.format("[%s](%s)", selected_text, url)
+--
+--     vim.cmd('normal! gv"_c' .. markdown_link)
+--     vim.cmd('normal! l')
+-- end, { desc = "Paste URL as markdown link" })
+
+-- Paste URL into selection (smart)
+vim.keymap.set("v", "p", function()
+    local clipboard = vim.fn.getreg('+')
+
+    if clipboard:match("^https?://") then
+        vim.cmd('normal! "xy')
+        local selected_text = vim.fn.getreg('x')
+        local markdown_link = string.format("[%s](%s)", selected_text, clipboard)
+        vim.cmd('normal! gv"_c' .. markdown_link)
+        vim.cmd('normal! l')
+    else
+        vim.cmd('normal! gv"' .. vim.v.register .. 'p')
+    end
+end, { desc = "Paste URL as markdown link" })
+
 require("markview").setup({
     experimental = {
         prefer_nvim = true,
@@ -82,5 +111,8 @@ require("markview").setup({
     },
     preview = {
         icon_provider = "mini",
+    },
+    latex = {
+        enable = false,
     },
 })

@@ -19,6 +19,7 @@ require("nvim-treesitter.configs").setup({
         "cpp",
         "markdown",
         "markdown_inline",
+        "latex",
         "vim",
         "bash",
         "gitignore",

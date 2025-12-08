@@ -58,9 +58,14 @@ require("mini.starter").setup({
         { action = "lua require('fzf-lua').oldfiles()",                                        name = "Recent files",                 section = "FZF" },
         { action = "lua require('mini.sessions').read(require('mini.sessions').get_latest())", name = "Load last session",            section = "Session" },
         { action = "lua require('mini.sessions').select()",                                    name = "Select session",               section = "Session" },
-        { action = "Obsidian new",                                                             name = "Obsidian new",                 section = "Obsidian" },
         { action = "Obsidian new_from_template",                                               name = "Obsidian new (from template)", section = "Obsidian" },
-        { action = "Obsidian today",                                                           name = "Obsidian today's daily note",  section = "Obsidian" },
+        {
+            name = "Obsidian open in Oil.nvim",
+            action = function() require("oil").open("~/ObsidianMD/Polymath") end,
+            section = "Obsidian"
+        },
+        { action = "Obsidian today", name = "Obsidian today's daily note", section = "Obsidian" },
+        { action = "Obsidian new",   name = "Obsidian new",                section = "Obsidian" },
     },
 
     header = table.concat({
